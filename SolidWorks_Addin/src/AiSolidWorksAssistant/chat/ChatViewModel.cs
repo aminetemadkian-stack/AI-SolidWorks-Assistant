@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
 using Ai.SolidWorksAssistant.Cad;
 using Ai.SolidWorksAssistant.Core;
