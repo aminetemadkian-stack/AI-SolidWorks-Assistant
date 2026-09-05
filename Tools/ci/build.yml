@@ -1,0 +1,42 @@
+name: Build (Windows / .NET Framework 4.7.2)
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK (for building the net472 add-in and running tests)
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Build add-in (Release)
+        run: dotnet build SolidWorks_Addin/src/AiSolidWorksAssistant -c Release
+
+      - name: Run unit tests
+        run: dotnet test SolidWorks_Addin/tests/AiSolidWorksAssistant.Tests -c Release --logger "trx"
+
+      - name: Stage installer payload
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path stage | Out-Null
+          Copy-Item SolidWorks_Addin/src/AiSolidWorksAssistant/bin/Release/net472/AiSolidWorksAssistant.dll stage/
+          Copy-Item SolidWorks_Addin/src/AiSolidWorksAssistant/bin/Release/net472/AiSolidWorksAssistant.pdb stage/ -ErrorAction SilentlyContinue
+          Copy-Item SolidWorks_Addin/src/AiSolidWorksAssistant/bin/Release/net472/Resources -Destination stage/ -Recurse -ErrorAction SilentlyContinue
+          Copy-Item Tools/register.cmd stage/
+          Copy-Item Tools/unregister.cmd stage/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AiSolidWorksAssistant-win64
+          path: stage/
+          if-no-files-found: error

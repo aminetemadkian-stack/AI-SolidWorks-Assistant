@@ -228,7 +228,7 @@ Mate
 
 ## ۳. Roadmap پروژه
 
-### Phase 0 — Project Foundation ✅ (وضعیت فعلی)
+### Phase 0 — Project Foundation ✅ (انجام شد)
 **هدف: ایجاد پایه GitHub**
 - Public Repository
 - Git structure
@@ -247,7 +247,7 @@ GitHub Repository
 Documentation Foundation
 ```
 
-### Phase 1 — SolidWorks Add-in
+### Phase 1 — SolidWorks Add-in 🚧 (در حال ساخت — اسکلت کامل ساخته شد، در انتظار تست روی ماشین واقعی سالیدورک)
 **هدف: ورود واقعی به SolidWorks**
 
 ساخت:
@@ -265,6 +265,14 @@ SolidWorks API
 - خواندن Selection
 
 **Milestone:** AI Assistant داخل SolidWorks باز می‌شود.
+
+**وضعیت پیاده‌سازی (این ریپو):**
+- ✅ اسکلت کامل C# در `SolidWorks_Addin/` — ورودی COM (`ISwAddin` با GUID راستی‌آزمایی‌شده)، پنل Task Pane با چت RTL فارسی/انگلیسی
+- ✅ خواننده‌ی وضعیت مدل (سند فعال، کانفیگ، درخت فیچرها، انتخاب‌ها) با late-binding — بدون نیاز به DLLهای interop در بیلد
+- ✅ فرمت PlanScript + پارسر (پشتیبانی اعداد فارسی) + اعتبارسنج ایمن
+- ✅ خط‌لوله‌ی تأیید-قبل-از-اجرا + تولید ماکروی VBA برای ۵ عملیات (مستطیل، دایره، اکسترود، برش، سوراخ)
+- ✅ ~۳۵ تست واحد + CI ویندوزی (GitHub Actions)
+- ⏳ تست نهایی روی ماشین واقعی با سالیدورک نصب‌شده (نیازمند ویندوز + سالیدورک)
 
 ### Phase 2 — AI Core
 ساخت:

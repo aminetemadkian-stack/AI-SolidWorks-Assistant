@@ -2,7 +2,7 @@
 
 An AI-powered assistant embedded inside **SolidWorks** that turns natural language (Persian & English, more languages planned) into real CAD operations — sketches, features, assemblies, and drawings — through a safe, auditable command pipeline.
 
-> ⚠️ **Status: Phase 0 — Foundation.** This repository currently contains the project skeleton, architecture, and roadmap. The SolidWorks Add-in and AI Core implementation are not built yet — see [Roadmap](#-roadmap) for what's coming and in what order.
+> 🚧 **Status: Phase 1 — SolidWorks Add-in Foundation (in progress).** Phase 0 delivered the skeleton, architecture and docs. The Phase 1 C# add-in is now being built in `SolidWorks_Addin/` — task-pane chat UI, model context reader, validated PlanScript command pipeline (unit-tested, CI-built on Windows). See the [add-in README](SolidWorks_Addin/README.md) and [Roadmap](#-roadmap).
 
 ## 🌍 Documentation
 
