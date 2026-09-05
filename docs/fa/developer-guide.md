@@ -2,15 +2,15 @@
 
 این صفحه مرزهای ماژول‌های مورد نظر رو توضیح می‌ده تا مشارکت‌کننده‌های اولیه به سمت همون معماری پیش برن. برای دیاگرام کامل به `README_FA.md` نگاه کنید.
 
-| پوشه | مسئولیت | فاز |
-|---|---|---|
-| `SolidWorks_Addin/` | پوسته‌ی Add-in به زبان C#، پنل چت AI (RTL/LTR)، خواننده‌ی وضعیت مدل | ۱ |
-| `AI_Core/` | تشخیص هدف، برنامه‌ریزی، زمینه، اعتبارسنجی، ایمنی | ۲ |
-| `AI_Providers/` | آداپتور providerهای ابری (OpenAI/Anthropic/Google) + آداپتور Ollama، روتر اول‌آنلاین | ۳-۴ |
-| `CAD_Commands/` | schema فرمان ساختاریافته + موتور فرمان (Sketch، Extrude، Cut، Hole، Fillet، Chamfer، Pattern، Assembly، Drawing) | ۶ |
-| `Localization/` | متن‌های فارسی/انگلیسی (و بعداً زبان‌های دیگه) و عبارت‌های NLP | ۵ |
-| `Tests/` | تست‌های واحد و یکپارچگی | مستمر |
-| `Examples/` | نمونه فرمان و نتیجه‌ی موردانتظار CAD | مستمر |
+| پوشه | مسئولیت | فاز | وضعیت |
+|---|---|---|---|
+| `SolidWorks_Addin/` | پوسته‌ی Add-in به زبان C#، پنل چت AI (RTL/LTR)، خواننده‌ی وضعیت مدل | ۱ | 🚧 کد آماده (به README خودش مراجعه کنید) |
+| `AI_Core/` | تشخیص هدف، برنامه‌ریزی، زمینه، اعتبارسنجی، ایمنی | ۲ | خالی (اینترفیس‌ها فعلاً در `SolidWorks_Addin/src/.../core` هستن تا فاز ۲) |
+| `AI_Providers/` | آداپتور providerهای ابری (OpenAI/Anthropic/Google) + آداپتور Ollama، روتر اول‌آنلاین | ۳-۴ | خالی |
+| `CAD_Commands/` | schema فرمان ساختاریافته + موتور فرمان (Sketch، Extrude، Cut، Hole، Fillet، Chamfer، Pattern، Assembly، Drawing) | ۶ | خالی (زیرمجموعه‌ی فاز ۱ فعلاً در `SolidWorks_Addin/src/.../cad` هست) |
+| `Localization/` | متن‌های فارسی/انگلیسی (و بعداً زبان‌های دیگه) و عبارت‌های NLP | ۵ | متن‌ها فعلاً در `ui/UITexts.cs` |
+| `Tests/` | تست‌های واحد و یکپارچگی | مستمر | تست‌ها در `SolidWorks_Addin/tests/` |
+| `Examples/` | نمونه فرمان و نتیجه‌ی موردانتظار CAD | مستمر | [`Samples/Plans/`](../../Samples/Plans) |
 
 ## یک قانونی که نباید شکسته بشه
 

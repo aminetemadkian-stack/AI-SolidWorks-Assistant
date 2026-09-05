@@ -1,0 +1,22 @@
+# Build outputs
+bin/
+obj/
+build/
+artifacts/
+*.user
+*.suo
+
+# SolidWorks interop DLLs are fetched locally (not redistributable via this repo)
+SolidWorks_Addin/libs/
+
+# IDE
+.vs/
+.idea/
+*.swp
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
