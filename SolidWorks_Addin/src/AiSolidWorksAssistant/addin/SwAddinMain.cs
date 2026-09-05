@@ -225,14 +225,15 @@ namespace Ai.SolidWorksAssistant.Addin
                 var cmdIdObj = ComLate.Call(
                     cmdGroup,
                     "AddCommandItem2",
-                    texts.TaskPaneTitle,
-                    -1,
-                    "ShowTaskPane",
-                    texts.TaskPaneTitle,
-                    0,
-                    "",
-                    "",
-                    -1);
+                    texts.TaskPaneTitle,       // Name
+                    -1,                        // Position (auto)
+                    texts.TaskPaneTitle,       // HintString
+                    texts.TaskPaneTitle,       // ToolTip
+                    0,                         // ImageListIndex
+                    "ShowTaskPane",            // CallbackFunction (click handler)
+                    "ShowTaskPaneUpdate",      // EnableMethod (update callback)
+                    0,                         // UserID
+                    0);                        // MenuTBOption (swDefaultButton)
                 var cmdId = Convert.ToInt32(cmdIdObj);
 
                 ComLate.Set(cmdGroup, "SmallIconList", new object[] { Path.Combine(iconsDir, "command_16.bmp") });

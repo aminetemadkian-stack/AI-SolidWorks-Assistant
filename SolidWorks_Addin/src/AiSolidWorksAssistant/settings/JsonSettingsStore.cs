@@ -43,7 +43,7 @@ namespace Ai.SolidWorksAssistant.Settings
 
         public static string DefaultPath()
         {
-            return Path.Combine(
+            return System.IO.Path.Combine(
                 Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
                 "AiSolidWorksAssistant",
                 "settings.json");
