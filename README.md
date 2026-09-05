@@ -130,21 +130,23 @@ The user never has to manually switch — if there's no internet, or the cloud c
 
 ## 🗺️ Roadmap
 
-| Phase | Goal | Milestone |
-|---|---|---|
-| 0 | Project foundation — repo, docs, architecture | This repository exists and is documented |
-| 1 | SolidWorks Add-in foundation | Add-in loads inside SolidWorks with an AI panel |
-| 2 | AI Core (controller, router, context manager, validator) | Core pipeline exists, not yet CAD-connected |
-| 3 | Online AI (first cloud provider) | A cloud request produces a structured command |
-| 4 | Offline AI (Ollama) | Assistant works with no internet |
-| 5 | Persian engineering AI | Persian commands (formal & colloquial), units, mixed-language sentences |
-| 6 | CAD command engine | Sketch, Extrude, Cut, Hole, Fillet, Chamfer, Pattern, Mirror |
-| 7 | Intelligent modeling | Assistant proposes changes for approval, not just executes commands |
-| 8 | Assembly intelligence | Insert components, mate, interference/collision awareness |
-| 9 | Drawing & manufacturing | Drawings, BOM, dimensioning, manufacturing constraints |
-| 10 | Engineering intelligence | Optimization suggestions — never presented as validated analysis without real calculation |
-| 11 | Security & reliability | Permissions, command validation, sandboxing, logging, API key security |
-| 12 | Public v1.0.0 release | Full source, docs, examples, tests, installation guides in 10 languages |
+| Phase | Goal | Milestone | Status |
+|---|---|---|---|
+| 0 | Project foundation — repo, docs, architecture | This repository exists and is documented | ✅ Done |
+| 1 | SolidWorks Add-in foundation | Add-in loads inside SolidWorks with an AI panel | 🚧 Code shipped — [chat task pane, model context, validated PlanScript pipeline (~35 tests)](SolidWorks_Addin/README.md). Awaiting first run on a real SOLIDWORKS machine |
+| 2 | AI Core (controller, router, context manager, validator) | Core pipeline exists, not yet CAD-connected | — |
+| 3 | Online AI (first cloud provider) | A cloud request produces a structured command | — |
+| 4 | Offline AI (Ollama) | Assistant works with no internet | — |
+| 5 | Persian engineering AI | Persian commands (formal & colloquial), units, mixed-language sentences | — |
+| 6 | CAD command engine | Sketch, Extrude, Cut, Hole, Fillet, Chamfer, Pattern, Mirror | — |
+| 7 | Intelligent modeling | Assistant proposes changes for approval, not just executes commands | — |
+| 8 | Assembly intelligence | Insert components, mate, interference/collision awareness | — |
+| 9 | Drawing & manufacturing | Drawings, BOM, dimensioning, manufacturing constraints | — |
+| 10 | Engineering intelligence | Optimization suggestions — never presented as validated analysis without real calculation | — |
+| 11 | Security & reliability | Permissions, command validation, sandboxing, logging, API key security | — |
+| 12 | Public v1.0.0 release | Full source, docs, examples, tests, installation guides in 10 languages | — |
+
+> Each completed phase is merged into `main` — `main` always reflects the latest state of the project. See [CHANGELOG.md](CHANGELOG.md) for the per-phase history.
 
 ## Contributing
 
